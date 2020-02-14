@@ -8,7 +8,7 @@ if (!function_exists('getMenuBySlug')) {
         return Menu::whereHas('parentItems', function ($query) {
             $query->with('children')
                 ->where('enabled', 1)
-                ->orderBy('order', 'asc');
+                ->orderBy('order', 'desc');
         })->whereSlug($slug)->first();
     }
 }

@@ -57,7 +57,6 @@ class Menu extends Model
         return $this->parentItems() //->where('enabled', 1)
             ->orderby('parent_id')
             ->orderby('order')
-            ->orderby('name')
             ->get();
     }
 
